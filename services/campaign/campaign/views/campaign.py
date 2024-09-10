@@ -1,10 +1,9 @@
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework import status, generics
-from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from campaign.models import Campaign
-from campaign.permissions import IsCampaignOwner
+from campaign.permissions import IsCampaignOwner, IsAuthenticated
 from campaign.serializers import CampaignReadSerializer
 from campaign.serializers.campaign import (
     CampaignWriteSerializer,
